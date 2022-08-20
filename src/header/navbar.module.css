@@ -1,0 +1,64 @@
+.container {
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    width: 100%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+.leftNav {
+    margin-top: 15px;
+    width: 30%;
+}
+
+.leftNav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.leftNav li {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.leftNav li:hover {
+    color: #4cf14c;
+    border-bottom: 1px solid #4cf14c;
+}
+
+.logoNav {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+.rightNav {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+.cartNav:visited {
+    color: #000;
+}
+
+.cartIcon {
+    padding-top: 20px;
+}

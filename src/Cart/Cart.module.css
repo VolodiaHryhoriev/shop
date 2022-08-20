@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.cartContent {
+    width: 80%;
+}
+
+.cartContent h1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sizePanel {
+    display: flex;
+    margin-left: 15px;
+}
+
+.sizePanel input {
+    margin: 0 5px;
+}
+
+h5, h3 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sizeButton {
+    background-color: #fff;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.sizeButton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.sizeButton:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.colorChoice {
+    display: flex;
+
+}
+
+.inputColor1 input, .inputColor2 input, .inputColor3 input {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.inputColor1, .inputColor2, .inputColor3  {
+    width: 35px;
+    height: 35px;
+}
+
+.inputColor1 input:hover, .inputColor2 input:hover, .inputColor3 input:hover {
+    border: 2px solid #5ECE7B;
+}
+
+.inputColor1 input:focus, .inputColor2 input:focus, .inputColor3 input:focus {
+    border: 2px solid #5ECE7B;
+}
+
+.inputColor1 {
+    margin-left: 10px;
+}
+
+.inputColor1 input {
+    background-color: #2B2B2B;
+}
+
+.inputColor2 input {
+    background-color: #15A4C3;
+}
+
+.inputColor3 input {
+    background-color: #EA8120;
+}
+
+
+
+
+.productImage {
+    display: flex;
+}
+
+.imageCounter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.imageCounter button {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageCounter button:hover {
+    border: 1px solid black;
+    background-color: #000;
+    color: #fff;
+}
+
+.orderInfo input {
+    border: none;
+    width: 15%;
+    height: 35px;
+    color: #fff;
+    background-color: #5ECE7B;
+}
+
+
+.orderInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.orderInfo h3 {
+    display: flex;
+}

@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.photoBlock {
+    display: flex;
+}
+
+.photoBlock img {
+    width: 30vw;
+    height: 50vh;
+}
+
+.product {
+    display: flex;
+    padding-right: 30px;
+}
+
+.productInfo h1 {
+    text-align: left;
+}
+
+
+.sizePanel {
+    display: flex;
+}
+
+.sizePanel input {
+    margin: 0 5px;
+}
+
+h5, h3 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sizeButton {
+    background-color: #fff;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.sizeButton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.sizeButton:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.colorChoice {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.inputColor1 input, .inputColor2 input, .inputColor3 input {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.inputColor1, .inputColor2, .inputColor3  {
+    width: 35px;
+    height: 35px;
+}
+
+.inputColor1 input:hover, .inputColor2 input:hover, .inputColor3 input:hover {
+    border: 2px solid #5ECE7B;
+}
+
+.inputColor1 input:focus, .inputColor2 input:focus, .inputColor3 input:focus {
+    border: 2px solid #5ECE7B;
+}
+
+.inputColor1 input {
+    background-color: #2B2B2B;
+}
+
+.inputColor2 input {
+    background-color: #15A4C3;
+}
+
+.inputColor3 input {
+    background-color: #EA8120;
+}
+
+.orderButton {
+    border: none;
+    height: 35px;
+    width: 150px;
+    color: #fff;
+    background-color: #5ECE7B;
+    display: flex;
+    justify-content: center;
+}

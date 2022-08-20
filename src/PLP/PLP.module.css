@@ -1,0 +1,44 @@
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.block {
+    width: 80%;
+}
+
+.block h1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 25%;
+    padding: 30px;
+}
+
+.productBlock:hover {
+    box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.products div p, .products div h4 {
+    text-align: left;
+}
+
+.products div p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
