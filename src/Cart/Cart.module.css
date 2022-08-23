@@ -4,6 +4,10 @@
     margin-top: 100px;
 }
 
+.product {
+    padding: 20px 0;
+}
+
 .cartContent {
     width: 80%;
 }
@@ -137,4 +141,14 @@ h5, h3 {
 
 .orderInfo h3 {
     display: flex;
+}
+
+@media screen and (max-width: 650px) {
+    .cartContent {
+        width: 100%;
+    }
+
+    .productImage img {
+        width: 50vw;
+    }
 }

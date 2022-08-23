@@ -16,7 +16,7 @@ const Navbar = () => {
                 </ul>
                 </div>
                 <div className={style.logoNav}>
-                    <FontAwesomeIcon className={style.cartIcon} icon={faCode} />
+                    <Link className={style.cartNav} to={RouteConst.PLP}><FontAwesomeIcon className={style.cartIcon} icon={faCode} /></Link>
                 </div>
                 <div className={style.rightNav}>
                        <Link className={style.cartNav} to={RouteConst.Cart}><FontAwesomeIcon className={style.cartIcon} icon={faCartShopping} /></Link>
