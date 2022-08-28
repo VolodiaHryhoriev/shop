@@ -21,18 +21,6 @@ const productReducer = (state=initialState, action ) => {
                 cart: [...state.cart, {...action.payload, qty: 1}] ,
                 error: ""
             }
-        // case actionsTypes.SET_PRODUCT_NAME:
-        //  return {
-        //      ...state,
-        //      name: action.payload,
-        //      error: ""
-        //     }
-        // case actionsTypes.SET_PRODUCT_PRICE:
-        //     return {
-        //         ...state,
-        //         price: action.payload,
-        //         error: ""
-        //     }
         default:
             return state
     }

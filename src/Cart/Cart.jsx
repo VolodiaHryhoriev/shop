@@ -1,38 +1,35 @@
 import style from "./Cart.module.css"
-import productA from "../images/Product A.png";
-import {useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import productReducer from "../redux/reducer";
-
+import {useSelector} from "react-redux";
+import {useEffect, useRef, useState} from "react";
 
 const Cart = () => {
-    const [count, setCount] = useState(1);
     const product = useSelector(state => state.productReducer.cart);
-    const dispatch = useDispatch();
-    // const getInfoThunk = () => dispatch(getInfo())
-
-    // useEffect(() => {
-        // getInfoThunk();
-
-    // }, [cartItems?])
+    const ref = useRef();
 
         const res = product.reduce((o, i) => {
-            if (!o.find(v => v.id == i.id)) {
-                o.push(i);
+            if ((!o.find(v => (v.id === i.id)))) {
+                    o.push(i);
             }
-            return o;
+            let arr = o.filter(item => item.qty !== 0)
+            return arr;
         }, []);
 
-    const riseCount = () => {
+    const [count, setCount] = useState(res.length);
+    let [price, setPrice] = useState(res.reduce((a, c) => a + parseInt(c.price.substring(1))* c.qty, 0))
+
+    const riseCount = (event) => {
+        let current = res.filter(c=>c.id === parseInt(event.target.parentNode.parentNode.parentNode.parentNode.id) )
+        current[0].qty++;
         setCount(count+1);
     }
-    const decreaseCount = () => {
-        if (count <= 1) {
-            return count
-        } else {
-            setCount(count-1);
-        }
+
+    const decreaseCount = (event) => {
+        let current = res.filter(c=>c.id === parseInt(event.target.parentNode.parentNode.parentNode.parentNode.id) )
+        current[0].qty--;
+        setCount(count-1);
     }
+
+
 
 
     return (
@@ -41,8 +38,9 @@ const Cart = () => {
             <h1>Cart</h1>
             <hr/>
                 {res.length === 0 && <div>Cart is empty</div>}
-                { res.map((item) => (
-                   <div key={item.id} className={style.product}>
+                {res.map((item) => (
+                    <div ref={ref} key={item.id} id={item.id}>
+                   <div className={style.product}>
                    <div className={style.productInfo}>
                    <h1>{item.name}</h1>
                    <h3>{item.price}</h3>
@@ -63,18 +61,19 @@ const Cart = () => {
                    <div className={style.productImage}>
                    <div className={style.imageCounter}>
                    <button onClick={riseCount}>+</button>
-                   <p>{count}</p>
+                   <p id={"count"}>{item.qty}</p>
                    <button onClick={decreaseCount}>-</button>
                    </div>
                    <img src={item.image} alt="productA"/>
                    </div>
                    </div>
+                    <hr></hr>
+                    </div>
                    ))
                }
-                <hr/>
                 <div className={style.orderInfo}>
-                    <h3>Quantity</h3>
-                    <h3>Total:</h3>
+                    <h3>Quantity: {count}</h3>
+                    <h3>Total: ${price}</h3>
                     <input type="button" value="ORDER"/>
                 </div>
             </div>

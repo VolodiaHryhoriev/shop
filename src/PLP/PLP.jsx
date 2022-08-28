@@ -17,25 +17,25 @@ const PLP = () => {
         productA: {
             id: 1,
             name: "Product A",
-            price: "$"+50.00,
+            price: "$50.00",
             image: productA
         },
         productB: {
             id: 2,
             name: "Product B",
-            price: "$"+40.00,
+            price: "$40.00",
             image: productB
         },
         productC: {
             id: 3,
             name: "Product C",
-            price: "$"+30.00,
+            price: "$30.00",
             image: productC
         },
         productD: {
             id: 4,
             name: "Product D",
-            price: "$"+20.00,
+            price: "$20.00",
             image: productD
         }
     }

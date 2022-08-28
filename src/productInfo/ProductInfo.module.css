@@ -98,3 +98,7 @@ h5, h3 {
     display: flex;
     justify-content: center;
 }
+
+.orderButton:hover {
+    background-color: #4cf14c;
+}

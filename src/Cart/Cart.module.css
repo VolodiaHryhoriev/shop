@@ -132,6 +132,9 @@ h5, h3 {
     background-color: #5ECE7B;
 }
 
+.orderInfo input:hover {
+    background-color: #4cf14c;
+}
 
 .orderInfo {
     display: flex;
