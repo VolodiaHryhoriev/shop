@@ -18,7 +18,7 @@ const productReducer = (state=initialState, action ) => {
         case actionsTypes.SET_CART:
             return {
                 ...state,
-                cart: [...state.cart, {...action.payload, qty: 1}] ,
+                cart: [...state.cart, {...action.payload}],
                 error: ""
             }
         default:

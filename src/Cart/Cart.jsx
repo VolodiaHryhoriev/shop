@@ -3,30 +3,36 @@ import {useSelector} from "react-redux";
 import {useEffect, useRef, useState} from "react";
 
 const Cart = () => {
-    const product = useSelector(state => state.productReducer.cart);
+    const product = useSelector(state => state.productReducer.cart)
     const ref = useRef();
 
+
         const res = product.reduce((o, i) => {
-            if ((!o.find(v => (v.id === i.id)))) {
-                    o.push(i);
+            if (!o.find(v => v.id === i.id)) {
+                o.push(i);
             }
-            let arr = o.filter(item => item.qty !== 0)
+            let arr = o.filter(item => item.qty !== 0);
             return arr;
         }, []);
 
-    const [count, setCount] = useState(res.length);
+    let countArr = [];
+    res.map(item=>countArr.push(item.qty))
+    let qty = countArr.reduce((acc, num) => acc + num, 0);
+    const [count, setCount] = useState(qty);
     let [price, setPrice] = useState(res.reduce((a, c) => a + parseInt(c.price.substring(1))* c.qty, 0))
 
     const riseCount = (event) => {
         let current = res.filter(c=>c.id === parseInt(event.target.parentNode.parentNode.parentNode.parentNode.id) )
         current[0].qty++;
         setCount(count+1);
+        setPrice(price + parseInt(current[0].price.substring(1)))
     }
 
     const decreaseCount = (event) => {
         let current = res.filter(c=>c.id === parseInt(event.target.parentNode.parentNode.parentNode.parentNode.id) )
         current[0].qty--;
         setCount(count-1);
+        setPrice(price-parseInt(current[0].price.substring(1)))
     }
 
 
@@ -71,11 +77,11 @@ const Cart = () => {
                     </div>
                    ))
                }
-                <div className={style.orderInfo}>
+                {res.length > 0 && <div className={style.orderInfo}>
                     <h3>Quantity: {count}</h3>
                     <h3>Total: ${price}</h3>
                     <input type="button" value="ORDER"/>
-                </div>
+                </div> }
             </div>
         </div>
     )

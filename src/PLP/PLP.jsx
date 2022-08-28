@@ -18,25 +18,29 @@ const PLP = () => {
             id: 1,
             name: "Product A",
             price: "$50.00",
-            image: productA
+            image: productA,
+            qty: 1
         },
         productB: {
             id: 2,
             name: "Product B",
             price: "$40.00",
-            image: productB
+            image: productB,
+            qty: 1
         },
         productC: {
             id: 3,
             name: "Product C",
             price: "$30.00",
-            image: productC
+            image: productC,
+            qty: 1
         },
         productD: {
             id: 4,
             name: "Product D",
             price: "$20.00",
-            image: productD
+            image: productD,
+            qty: 1
         }
     }
 

@@ -8,12 +8,15 @@ const ProductAInfo = () => {
         const dispatch = useDispatch();
         const product = useSelector(state => state.productReducer.product);
 
-
-        useEffect(() => {
-            document.querySelector("#order").addEventListener("click", () => {
-                dispatch(actionInfo.setCart(product));
-            })
-        }, [])
+        // useEffect(() => {
+        //     document.querySelector("#order").addEventListener("click", () => {
+        //         dispatch(actionInfo.setCart(product));
+        //     })
+        // }, [])
+    const navToCart = (event) => {
+        dispatch(actionInfo.setCart(product));
+        event.currentTarget.disabled = true;
+    }
 
         return (
             <div className={style.container}>
@@ -38,7 +41,7 @@ const ProductAInfo = () => {
                             <div className={style.inputColor2}><input type="button" /></div>
                             <div className={style.inputColor3}><input type="button" /></div>
                         </div>
-                        <input className={style.orderButton} type="button" value="ORDER" id={"order"}/>
+                        <input className={style.orderButton} type="submit" value="ORDER" id={"order"} onClick={navToCart}/>
                     </div>
                 </div>
             </div>
