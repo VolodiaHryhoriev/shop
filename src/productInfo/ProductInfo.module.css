@@ -110,5 +110,6 @@ h5, h3 {
     .photoBlock img {
         width: 50vw;
         height: 40vh;
+        margin-top: 25px;
     }
 }
