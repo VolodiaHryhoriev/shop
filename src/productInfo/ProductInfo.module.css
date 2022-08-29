@@ -102,3 +102,13 @@ h5, h3 {
 .orderButton:hover {
     background-color: #4cf14c;
 }
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+    .photoBlock img {
+        width: 50vw;
+        height: 40vh;
+    }
+}
