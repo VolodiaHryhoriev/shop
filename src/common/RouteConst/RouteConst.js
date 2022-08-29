@@ -1,6 +1,6 @@
 export const RouteConst = {
     Cart: "/cart",
-    PLP: "/",
+    PLP: "/shop",
     ProductAInfo: "/productAInfo",
     ProductBInfo: "/productBInfo",
     ProductCInfo: "/productCInfo",
